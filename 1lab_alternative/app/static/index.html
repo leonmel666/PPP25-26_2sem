@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="navbar">
+    <button class="back-btn" id="backBtn"><i class="fas fa-arrow-left"></i></button>
+    <div class="breadcrumb" id="breadcrumb">Главная</div>
+    <button class="rescan-btn" id="rescanBtn"><i class="fas fa-sync-alt"></i></button>
+</div>
+
+<div class="container" id="app">
+    <div id="content">Загрузка...</div>
+</div>
+
+<div class="now-playing-bar" id="nowPlayingBar" style="display: none;">
+    <img class="np-cover" id="npCover" src="" alt="cover">
+    <div class="np-info">
+        <div class="np-title" id="npTitle">-</div>
+        <div class="np-artist" id="npArtist">-</div>
+    </div>
+    <div class="np-controls">
+        <button class="ctrl-btn" id="npPrev"><i class="fas fa-backward-step"></i></button>
+        <button class="ctrl-btn play" id="npPlayPause"><i class="fas fa-play"></i></button>
+        <button class="ctrl-btn" id="npNext"><i class="fas fa-forward-step"></i></button>
+        <button class="ctrl-btn" id="repeatBtn"><i class="fas fa-repeat"></i></button>
+        <button class="ctrl-btn" id="shuffleBtn"><i class="fas fa-shuffle"></i></button>
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBarBg">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="time">
+            <span id="currentTime">0:00</span>
+            <span id="totalTime">0:00</span>
+        </div>
+    </div>
+    <div class="volume">
+        <span id="volumeIcon"><i class="fas fa-volume-up"></i></span>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.8">
+    </div>
+</div>
+
+<script src="/static/js/player.js"></script>
+</body>
+</html>
